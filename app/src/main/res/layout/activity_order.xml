@@ -20,7 +20,7 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         <android.support.design.widget.TabLayout
-            android:id="@+id/tabs_kehadiran_dosen"
+            android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabGravity="fill"
@@ -31,7 +31,7 @@
 
     <com.gramcaster.radinaldn.aurelia.viewpager.CustomViewPager
         android:padding="5dp"
-        android:id="@+id/viewpager_kehadiran_dosen"
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />

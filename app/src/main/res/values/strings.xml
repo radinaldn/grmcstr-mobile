@@ -8,4 +8,8 @@
     <string name="setting">Setting</string>
     <string name="order">Order</string>
     <string name="deposit">Deposit</string>
+    <string name="about">About</string>
+    <string name="app_name_version">Aurelia v1.0</string>
+    <string name="affiliate">Affiliate</string>
+    <string name="konfirmasi_pembayaran">Konfirmasi Pembayaran</string>
 </resources>

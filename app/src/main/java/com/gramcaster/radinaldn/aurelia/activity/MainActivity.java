@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -93,18 +94,52 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, DepositActivity.class);
             startActivity(intent);
 
+        } else if (id == R.id.nav_affiliate) {
+            Intent intent = new Intent(MainActivity.this, AffiliateActivity.class);
+            startActivity(intent);
+
+        } else if(id == R.id.nav_konfirmasi_pembayaran) {
+            Intent intent = new Intent(MainActivity.this, KonfirmasiPembayaranActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_setting) {
             Intent intent = new Intent(MainActivity.this, ProfilActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_about) {
+            showLicesenceApp();
 
         } else if (id == R.id.nav_logout) {
-
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void showLicesenceApp() {
+        AlertDialog alertDialog = new AlertDialog.Builder(
+                MainActivity.this).create();
+
+        // Setting Dialog Title
+        alertDialog.setTitle(getString(R.string.about));
+
+        // Setting Dialog Message
+        alertDialog.setMessage(getString(R.string.app_name_version));
+
+        // Setting Icon to Dialog
+        alertDialog.setIcon(R.drawable.logo_app_300_x_300);
+
+        // Setting OK Button
+//            alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+//                public void onClick(DialogInterface dialog, int which) {
+//                    // Write your code here to execute after dialog closed
+//                    Toast.makeText(getApplicationContext(), "You clicked on OK", Toast.LENGTH_SHORT).show();
+//                }
+//            });
+
+        // Showing Alert Message
+        alertDialog.show();
     }
 }

@@ -40,8 +40,8 @@ public class OrderActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        viewPager = findViewById(R.id.viewpager_kehadiran_dosen);
-        tabLayout = findViewById(R.id.tabs_kehadiran_dosen);
+        viewPager = findViewById(R.id.viewpager);
+        tabLayout = findViewById(R.id.tabs);
 
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);

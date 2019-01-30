@@ -15,9 +15,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"
             android:configChanges="orientation"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,18 +26,25 @@
         </activity>
         <activity
             android:name=".activity.RegisterActivity"
-            android:theme="@style/AppTheme.NoActionBar"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.OrderActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/order"/>
+            android:label="@string/order"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.DepositActivity"
+            android:label="@string/deposit"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ProfilActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.AffiliateActivity"
             android:theme="@style/noAnimTheme" />
-        <activity android:name=".activity.ProfilActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.KonfirmasiPembayaranActivity"
+            android:theme="@style/noAnimTheme"/>
     </application>
 
 </manifest>
