@@ -1,4 +1,4 @@
-package com.gramcaster.radinaldn.gramcaster.activity;
+package com.gramcaster.radinaldn.aurelia.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.gramcaster.radinaldn.gramcaster.R;
+import com.gramcaster.radinaldn.aurelia.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -90,8 +90,12 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_deposit) {
+            Intent intent = new Intent(MainActivity.this, DepositActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_setting) {
+            Intent intent = new Intent(MainActivity.this, ProfilActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_about) {
 

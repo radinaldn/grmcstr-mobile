@@ -1,4 +1,4 @@
-package com.gramcaster.radinaldn.aurelia.adapter;
+package com.gramcaster.radinaldn.aurelia.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

@@ -1,4 +1,4 @@
-package com.gramcaster.radinaldn.gramcaster;
+package com.gramcaster.radinaldn.aurelia;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

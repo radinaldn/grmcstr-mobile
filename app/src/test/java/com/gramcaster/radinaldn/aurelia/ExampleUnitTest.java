@@ -1,4 +1,4 @@
-package com.gramcaster.radinaldn.gramcaster;
+package com.gramcaster.radinaldn.aurelia;
 
 import org.junit.Test;
 

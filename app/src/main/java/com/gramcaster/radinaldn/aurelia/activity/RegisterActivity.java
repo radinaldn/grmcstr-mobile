@@ -1,9 +1,9 @@
-package com.gramcaster.radinaldn.gramcaster.activity;
+package com.gramcaster.radinaldn.aurelia.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.gramcaster.radinaldn.gramcaster.R;
+import com.gramcaster.radinaldn.aurelia.R;
 
 public class RegisterActivity extends AppCompatActivity {
 

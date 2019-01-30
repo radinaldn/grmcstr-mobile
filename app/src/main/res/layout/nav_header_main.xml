@@ -26,7 +26,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/avatar" />
+        android:src="@drawable/userimg" />
 
     <TextView
         android:gravity="center_horizontal"
@@ -41,7 +41,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="developer@gramcaster.com" />
+        android:text="developer@aurelia.com" />
 
 </LinearLayout>
 </RelativeLayout>

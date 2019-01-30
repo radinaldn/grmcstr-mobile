@@ -16,7 +16,14 @@
             android:id="@+id/nav_deposit"
             android:icon="@drawable/ic_account_balance_wallet_black"
             android:title="Deposit" />
-
+        <item
+            android:id="@+id/nav_affiliate"
+            android:icon="@drawable/ic_affiliate_black"
+            android:title="Affiliate" />
+        <item
+            android:id="@+id/nav_konfirmasi_pembayaran"
+            android:icon="@drawable/ic_monetization_on_black"
+            android:title="Konfirmasi Pembayaran"/>
     </group>
 
     <item android:title="Other">
