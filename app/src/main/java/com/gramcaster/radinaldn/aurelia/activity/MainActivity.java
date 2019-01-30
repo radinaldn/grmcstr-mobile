@@ -1,5 +1,6 @@
-package com.gramcaster.radinaldn.gramcaster;
+package com.gramcaster.radinaldn.gramcaster.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.gramcaster.radinaldn.gramcaster.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -83,6 +86,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_dashboard) {
             // Handle the camera action
         } else if (id == R.id.nav_order) {
+            Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_deposit) {
 
