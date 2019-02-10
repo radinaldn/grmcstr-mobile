@@ -12,4 +12,15 @@
     <string name="app_name_version">Aurelia v1.0</string>
     <string name="affiliate">Affiliate</string>
     <string name="konfirmasi_pembayaran">Konfirmasi Pembayaran</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="msg">Please grant all permissions</string>
+    <string name="permission_granted">Permission granted</string>
+    <string name="error_occured">Error occurred</string>
+    <string name="failed_to_connect_to_server">Failed to connect to server</string>
+    <string name="logout">Logout</string>
 </resources>

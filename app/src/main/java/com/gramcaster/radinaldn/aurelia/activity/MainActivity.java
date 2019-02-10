@@ -14,16 +14,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.gramcaster.radinaldn.aurelia.R;
+import com.gramcaster.radinaldn.aurelia.config.ServerConfig;
+import com.gramcaster.radinaldn.aurelia.util.SessionManager;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private TextView tvUsername, tvEmail;
+    private ImageView ivProfil;
+    private SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sessionManager = new SessionManager(this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -44,6 +56,24 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        View header = navigationView.getHeaderView(0);
+
+        ivProfil = header.findViewById(R.id.ivProfil);
+
+        tvUsername = header.findViewById(R.id.tvUsername);
+        tvEmail = header.findViewById(R.id.tvEmail);
+
+//        Picasso.with(getApplicationContext())
+//                .load(ServerConfig.IMAGE_PATH + "/dosen/" + sessionManager.getDosenDetail().get(TAG_FOTO))
+//                .resize(100, 100)
+//                .placeholder(R.drawable.dummy_ava)
+//                .error(R.drawable.dummy_ava)
+//                .centerCrop()
+//                .into(imageView);
+
+        tvUsername.setText(sessionManager.getUserDetails().get(SessionManager.USERNAME));
+        tvEmail.setText(sessionManager.getUserDetails().get(SessionManager.EMAIL));
     }
 
     @Override
@@ -71,8 +101,12 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.logout) {
+            sessionManager.logoutUser();
+            Intent intent =  new Intent(MainActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+            startActivity(intent);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -109,8 +143,11 @@ public class MainActivity extends AppCompatActivity
             showLicesenceApp();
 
         } else if (id == R.id.nav_logout) {
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            sessionManager.logoutUser();
+            Intent intent =  new Intent(MainActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
             startActivity(intent);
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

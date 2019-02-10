@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    android:layout_height="@dimen/nav_header_height"
+<RelativeLayout android:layout_height="@dimen/nav_header_height"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/drawer_banner"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 <LinearLayout
     android:background="@color/alphaShade"
@@ -22,26 +21,27 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_gravity="center_horizontal"
-        android:id="@+id/imageView"
+        android:id="@+id/ivProfil"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:src="@drawable/userimg" />
 
     <TextView
+        android:id="@+id/tvUsername"
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Android Developer"
+        tools:text="Android Developer"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:gravity="center_horizontal"
-        android:id="@+id/textView"
+        android:id="@+id/tvEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="developer@aurelia.com" />
+        tools:text="developer@aurelia.com" />
 
 </LinearLayout>
 </RelativeLayout>
